@@ -5,8 +5,28 @@
 }
 
 body {
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+  margin: 0;
+  padding: 0;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.root {
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center {
+  min-width: 50vw;
+}
+
+td {
+  text-align: center;
+  padding: 8px;
 }
 
 button {
@@ -35,83 +55,83 @@ button {
   padding: 10px;
   justify-content: center;
   align-items: center;
+
+  /* typography */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.btn:disabled {
+  pointer-events: none;
+}
+
+/******************
+ * Fill
+ ******************/
+.btn--fill {
   background: var(--Blue-Light-9, #0090ff);
   color: white;
 }
 
-.btn:hover {
+.btn--fill:hover {
   background: var(--Blue-Light-10, #0588f0);
 }
-.btn:focus-visible {
+
+.btn--fill:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
-  /* box-shadow: (--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000) */
-  /* box-shadow: (--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000) */
-  /* vars */
-
-  --tw-ring-inset: 1px;
-  --tw-ring-offset-width: 2px;
-  --tw-ring-color: yellow;
-  --tw-shadow: red;
-  /* computed */
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
-    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
-    calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
-    var(--tw-shadow, 0 0 #0000);
-  /*  */
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
-    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
-    calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: 
-    /* shadow 1 */ var(--tw-ring-offset-shadow),
-    /* shadow 2 */ var(--tw-ring-shadow),
-    /* shadow 3 */ var(--tw-shadow, 0 0 #0000);
+  outline-color: var(--Blue-Light-8, #5eb1ef);
 }
 
-.shadow-debug {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  /* box-shadow: (--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000) */
-  /* box-shadow: (--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000) */
-  /* vars */
-
-  --tw-ring-inset: 1px;
-  --tw-ring-offset-width: 2px;
-  --tw-ring-color: yellow;
-  --tw-shadow: red;
-  /* computed */
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
-    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
-    calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
-    var(--tw-shadow, 0 0 #0000);
-  /*  */
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
-    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
-    calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: 
-    /* shadow 1 */ var(--tw-ring-offset-shadow),
-    /* shadow 2 */ var(--tw-ring-shadow),
-    /* shadow 3 */ var(--tw-shadow, 0 0 #0000);
-  box
-  box-shadow: 
-    /* shadow 1 */ 
-    rgb(255, 0, 139) 0px 0px 0px 2px, 
-    /* shadow 2 */ rgb(162, 216, 17) 0px 0px 0px 4px, 
-    /* shadow 3 */ rgba(0, 0, 0, 0) 0px 0px 0px 0px
-  
-}
-
-/* box-shadow: color x-offset y-offset blur spread; */
-.shadow--1 {
-
-}
-
-.btn:disabled {
+.btn--fill:disabled {
   background: var(--Blue-Light-6, #acd8fc);
+}
+
+/******************
+ * Outline
+ ******************/
+.btn--outline {
+  border: 2px solid var(--Blue-Light-9, #0090ff);
+  background: #fff;
+  color: var(--Blue-Light-9, #0090ff);
+}
+
+.btn--outline:hover {
+  background: var(--Blue-Light-2, #f4faff);
+}
+
+.btn--outline:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  outline-color: var(--Blue-Light-8, #5eb1ef);
+}
+
+.btn--outline:disabled {
+  border: 2px solid var(--Blue-Light-6, #acd8fc);
+  color: var(--Blue-Light-6, #acd8fc);
+}
+
+/******************
+ * Ghost
+ ******************/
+.btn--ghost {
+  background: transparent;
+  color: var(--Blue-Light-9, #0090ff);
+}
+
+.btn--ghost:hover {
+  background: var(--Blue-Light-2, #f4faff);
+}
+
+.btn--ghost:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  outline-color: var(--Blue-Light-8, #5eb1ef);
+}
+
+.btn--ghost:disabled {
+  color: var(--Blue-Light-6, #acd8fc);
 }

@@ -6,13 +6,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>How to make a button</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <h1>This is a simple HTML + CSS template!</h1>
-  <button>Button</button>
-  <button class="btn">Button</button>
+  <div class="root">
+    <div class="center">
+      <h1>This is a simple HTML + CSS template!</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              Fill
+            </td>
+            <td>
+              <button class="btn btn--fill">Button</button>
+            </td>
+            <td>
+              <button class="btn btn--fill" disabled>Button</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Outline
+            </td>
+            <td>
+              <button class="btn btn--outline">Button</button>
+            </td>
+            <td>
+              <button class="btn btn--outline" disabled>Button</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Ghost
+            </td>
+            <td>
+              <button class="btn btn--ghost">Button</button>
+            </td>
+            <td>
+              <button class="btn btn--ghost" disabled>Button</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </div>
+
 </body>
 
 </html>
