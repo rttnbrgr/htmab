@@ -28,3 +28,17 @@ button {
   /* btn styles */
   cursor: pointer;
 }
+
+.btn {
+  border: none; /* move to reset? */
+  display: inline-flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  background: var(--Blue-Light-9, #0090ff);
+  color: white;
+}
+
+.btn:hover {
+  background: var(--Blue-Light-10, #0588f0);
+}
