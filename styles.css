@@ -20,10 +20,6 @@ body {
   justify-content: center;
 }
 
-.center {
-  min-width: 50vw;
-}
-
 td {
   text-align: center;
   padding: 8px;
@@ -76,10 +72,12 @@ button {
   color: white;
 }
 
+.btn--fill.mock--hover,
 .btn--fill:hover {
   background: var(--Blue-Light-10, #0588f0);
 }
 
+.btn--fill.mock--focus,
 .btn--fill:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -99,10 +97,12 @@ button {
   color: var(--Blue-Light-9, #0090ff);
 }
 
+.btn--outline.mock--hover,
 .btn--outline:hover {
   background: var(--Blue-Light-2, #f4faff);
 }
 
+.btn--outline.mock--focus,
 .btn--outline:focus-visible {
   outline: 2px solid transparent;
   outline-offset: -2px;
@@ -122,10 +122,12 @@ button {
   color: var(--Blue-Light-9, #0090ff);
 }
 
+.btn--ghost.mock--hover,
 .btn--ghost:hover {
   background: var(--Blue-Light-2, #f4faff);
 }
 
+.btn--ghost.mock--focus,
 .btn--ghost:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -134,4 +136,9 @@ button {
 
 .btn--ghost:disabled {
   color: var(--Blue-Light-6, #acd8fc);
+}
+
+.mock--hover,
+.mock--focus {
+  pointer-events: none;
 }
