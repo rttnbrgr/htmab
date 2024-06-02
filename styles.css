@@ -42,3 +42,76 @@ button {
 .btn:hover {
   background: var(--Blue-Light-10, #0588f0);
 }
+.btn:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  /* box-shadow: (--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000) */
+  /* box-shadow: (--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000) */
+  /* vars */
+
+  --tw-ring-inset: 1px;
+  --tw-ring-offset-width: 2px;
+  --tw-ring-color: yellow;
+  --tw-shadow: red;
+  /* computed */
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+    calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+    var(--tw-shadow, 0 0 #0000);
+  /*  */
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+    calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: 
+    /* shadow 1 */ var(--tw-ring-offset-shadow),
+    /* shadow 2 */ var(--tw-ring-shadow),
+    /* shadow 3 */ var(--tw-shadow, 0 0 #0000);
+}
+
+.shadow-debug {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  /* box-shadow: (--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000) */
+  /* box-shadow: (--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000) */
+  /* vars */
+
+  --tw-ring-inset: 1px;
+  --tw-ring-offset-width: 2px;
+  --tw-ring-color: yellow;
+  --tw-shadow: red;
+  /* computed */
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+    calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+    var(--tw-shadow, 0 0 #0000);
+  /*  */
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+    calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: 
+    /* shadow 1 */ var(--tw-ring-offset-shadow),
+    /* shadow 2 */ var(--tw-ring-shadow),
+    /* shadow 3 */ var(--tw-shadow, 0 0 #0000);
+  box
+  box-shadow: 
+    /* shadow 1 */ 
+    rgb(255, 0, 139) 0px 0px 0px 2px, 
+    /* shadow 2 */ rgb(162, 216, 17) 0px 0px 0px 4px, 
+    /* shadow 3 */ rgba(0, 0, 0, 0) 0px 0px 0px 0px
+  
+}
+
+/* box-shadow: color x-offset y-offset blur spread; */
+.shadow--1 {
+
+}
+
+.btn:disabled {
+  background: var(--Blue-Light-6, #acd8fc);
+}
