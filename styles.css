@@ -142,3 +142,10 @@ button {
 .mock--focus {
   pointer-events: none;
 }
+
+/******************
+ * Size
+ ******************/
+.btn--small {
+  padding: 4px;
+}
