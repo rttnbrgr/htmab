@@ -1,7 +1,9 @@
 {
-  "name": "htmab",
+  "name": "how-to-make-a-button",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "How to make a button",
+  "author": "@rttnbrgr (Nathan Rothenberger)",
   "type": "module",
   "scripts": {
     "dev": "vite",
