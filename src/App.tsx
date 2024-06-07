@@ -1,37 +1,5 @@
-import cn from "classnames";
-import "./styles.css";
-
-type ButtonProps = {
-  is?: boolean;
-  style?: "fill" | "outline" | "ghost";
-  size?: "small" | "base";
-  disabled?: boolean;
-  mock?: string;
-  children: React.ReactNode;
-};
-
-const Button = ({
-  style = "fill",
-  size = "base",
-  mock,
-  disabled,
-  children,
-}: ButtonProps) => {
-  //
-
-  const styleClass = `btn--${style}`;
-  const sizeClass = `btn--${size}`;
-  const mockClass = `mock--${mock}`;
-
-  return (
-    <button
-      className={cn(["btn", styleClass, sizeClass, mockClass])}
-      disabled={disabled}
-    >
-      {children}
-    </button>
-  );
-};
+import "./app.css";
+import { Button } from "./button";
 
 function App() {
   return (
