@@ -1,4 +1,37 @@
+import cn from "classnames";
 import "./styles.css";
+
+type ButtonProps = {
+  is?: boolean;
+  style?: "fill" | "outline" | "ghost";
+  size?: "small" | "base";
+  disabled?: boolean;
+  mock?: string;
+  children: React.ReactNode;
+};
+
+const Button = ({
+  style = "fill",
+  size = "base",
+  mock,
+  disabled,
+  children,
+}: ButtonProps) => {
+  //
+
+  const styleClass = `btn--${style}`;
+  const sizeClass = `btn--${size}`;
+  const mockClass = `mock--${mock}`;
+
+  return (
+    <button
+      className={cn(["btn", styleClass, sizeClass, mockClass])}
+      disabled={disabled}
+    >
+      {children}
+    </button>
+  );
+};
 
 function App() {
   return (
@@ -21,126 +54,138 @@ function App() {
                 <td>Fill</td>
                 <td>Base</td>
                 <td>
-                  <button className="btn btn--fill">Button</button>
+                  <Button style="fill">Button</Button>
                 </td>
                 <td>
-                  <button className="btn btn--fill mock--hover">Button</button>
-                </td>
-                <td>
-                  <button className="btn btn--fill mock--focus">Button</button>
-                </td>
-                <td>
-                  <button className="btn btn--fill" disabled>
+                  <Button style="fill" mock="hover">
                     Button
-                  </button>
+                  </Button>
+                </td>
+                <td>
+                  <Button style="fill" mock="focus">
+                    Button
+                  </Button>
+                </td>
+                <td>
+                  <Button style="fill" disabled>
+                    Button
+                  </Button>
                 </td>
               </tr>
               <tr>
                 <td></td>
                 <td>Small</td>
                 <td>
-                  <button className="btn btn--small btn--fill">Button</button>
+                  <Button size="small" style="fill">
+                    Button
+                  </Button>
                 </td>
                 <td>
-                  <button className="btn btn--small btn--fill mock--hover">
+                  <Button size="small" style="fill" mock="hover">
                     Button
-                  </button>
+                  </Button>
                 </td>
                 <td>
-                  <button className="btn btn--small btn--fill mock--focus">
+                  <Button size="small" style="fill" mock="focus">
                     Button
-                  </button>
+                  </Button>
                 </td>
                 <td>
-                  <button className="btn btn--small btn--fill" disabled>
+                  <Button size="small" style="fill" disabled>
                     Button
-                  </button>
+                  </Button>
                 </td>
               </tr>
               <tr>
                 <td>Outline</td>
                 <td>Base</td>
                 <td>
-                  <button className="btn btn--outline">Button</button>
+                  <Button style="outline">Button</Button>
                 </td>
                 <td>
-                  <button className="btn btn--outline mock--hover">
+                  <Button style="outline" mock="hover">
                     Button
-                  </button>
+                  </Button>
                 </td>
                 <td>
-                  <button className="btn btn--outline mock--focus">
+                  <Button style="outline" mock="focus">
                     Button
-                  </button>
+                  </Button>
                 </td>
                 <td>
-                  <button className="btn btn--outline" disabled>
+                  <Button style="outline" disabled>
                     Button
-                  </button>
+                  </Button>
                 </td>
               </tr>
               <tr>
                 <td></td>
-                <td>Small</td>
+                <td>small</td>
                 <td>
-                  <button className="btn btn--small btn--outline">
+                  <Button size="small" style="outline">
                     Button
-                  </button>
+                  </Button>
                 </td>
                 <td>
-                  <button className="btn btn--small btn--outline mock--hover">
+                  <Button size="small" style="outline" mock="hover">
                     Button
-                  </button>
+                  </Button>
                 </td>
                 <td>
-                  <button className="btn btn--small btn--outline mock--focus">
+                  <Button size="small" style="outline" mock="focus">
                     Button
-                  </button>
+                  </Button>
                 </td>
                 <td>
-                  <button className="btn btn--small btn--outline" disabled>
+                  <Button size="small" style="outline" disabled>
                     Button
-                  </button>
+                  </Button>
                 </td>
               </tr>
               <tr>
                 <td>Ghost</td>
                 <td>Base</td>
                 <td>
-                  <button className="btn btn--ghost">Button</button>
+                  <Button style="ghost">Button</Button>
                 </td>
                 <td>
-                  <button className="btn btn--ghost mock--hover">Button</button>
-                </td>
-                <td>
-                  <button className="btn btn--ghost mock--focus">Button</button>
-                </td>
-                <td>
-                  <button className="btn btn--ghost" disabled>
+                  <Button style="ghost" mock="hover">
                     Button
-                  </button>
+                  </Button>
+                </td>
+                <td>
+                  <Button style="ghost" mock="focus">
+                    Button
+                  </Button>
+                </td>
+                <td>
+                  <Button style="ghost" disabled>
+                    Button
+                  </Button>
                 </td>
               </tr>
               <tr>
                 <td></td>
-                <td>Small</td>
+                <td>small</td>
                 <td>
-                  <button className="btn btn--small btn--ghost">Button</button>
+                  <Button size="small" style="ghost">
+                    Button
+                  </Button>
                 </td>
                 <td>
-                  <button className="btn btn--small btn--ghost mock--hover">
+                  <Button size="small" style="ghost" mock="hover">
                     Button
-                  </button>
+                  </Button>
                 </td>
                 <td>
-                  <button className="btn btn--small btn--ghost mock--focus">
+                  <Button size="small" style="ghost" mock="focus">
                     Button
-                  </button>
+                  </Button>
                 </td>
                 <td>
-                  <button className="btn btn--small btn--ghost" disabled>
+                  <Button size="small" style="ghost" disabled>
                     Button
-                  </button>
+                  </Button>
                 </td>
               </tr>
             </tbody>
