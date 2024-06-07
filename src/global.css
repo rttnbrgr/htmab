@@ -11,6 +11,40 @@ body {
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+/******************
+* Vars
+******************/
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --base: #fff;
+    --base-hover: #f4faff;
+    --accent: #0090ff;
+    --accent-hover: #0588f0;
+    --focus: #5eb1ef;
+    --accent-disabled: #acd8fc;
+  }
+  body {
+    background: var(--base);
+    color: #000;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --base: #000000;
+    --base-hover: #111927;
+    --accent: #0090ff;
+    --accent-hover: #3b9eff;
+    --focus: #5eb1ef;
+    --accent-disabled: #2870bd;
+  }
+  body {
+    background: var(--base);
+    color: #fff;
+  }
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

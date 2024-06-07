@@ -40,50 +40,50 @@ button {
  * Fill
  ******************/
 .btn--fill {
-  background: var(--Blue-Light-9, #0090ff);
-  color: white;
+  background: var(--accent);
+  color: var(--base);
 }
 
 .btn--fill.mock--hover,
 .btn--fill:hover {
-  background: var(--Blue-Light-10, #0588f0);
+  background: var(--accent-hover);
 }
 
 .btn--fill.mock--focus,
 .btn--fill:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
-  outline-color: var(--Blue-Light-8, #5eb1ef);
+  outline-color: var(--accent-focus);
 }
 
 .btn--fill:disabled {
-  background: var(--Blue-Light-6, #acd8fc);
+  background: var(--accent-disabled);
 }
 
 /******************
  * Outline
  ******************/
 .btn--outline {
-  border: 2px solid var(--Blue-Light-9, #0090ff);
-  background: #fff;
-  color: var(--Blue-Light-9, #0090ff);
+  border: 2px solid var(--accent);
+  background: var(--base);
+  color: var(--accent);
 }
 
 .btn--outline.mock--hover,
 .btn--outline:hover {
-  background: var(--Blue-Light-2, #f4faff);
+  background: var(--base-hover);
 }
 
 .btn--outline.mock--focus,
 .btn--outline:focus-visible {
   outline: 2px solid transparent;
   outline-offset: -2px;
-  outline-color: var(--Blue-Light-8, #5eb1ef);
+  outline-color: var(--accent-focus);
 }
 
 .btn--outline:disabled {
-  border: 2px solid var(--Blue-Light-6, #acd8fc);
-  color: var(--Blue-Light-6, #acd8fc);
+  border: 2px solid var(--accent-disabled);
+  color: var(--accent-disabled);
 }
 
 /******************
@@ -91,23 +91,23 @@ button {
  ******************/
 .btn--ghost {
   background: transparent;
-  color: var(--Blue-Light-9, #0090ff);
+  color: var(--accent);
 }
 
 .btn--ghost.mock--hover,
 .btn--ghost:hover {
-  background: var(--Blue-Light-2, #f4faff);
+  background: var(--base-hover);
 }
 
 .btn--ghost.mock--focus,
 .btn--ghost:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
-  outline-color: var(--Blue-Light-8, #5eb1ef);
+  outline-color: var(--accent-focus);
 }
 
 .btn--ghost:disabled {
-  color: var(--Blue-Light-6, #acd8fc);
+  color: var(--accent-disabled);
 }
 
 .mock--hover,
