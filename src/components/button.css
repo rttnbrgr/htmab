@@ -23,13 +23,15 @@ button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-
-  /* typography */
-  /* font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal; */
+  /* 
+   * typography 
+   *
+   * font-family: Inter;
+   * font-size: 16px;
+   * font-style: normal;
+   * font-weight: 400;
+   * line-height: normal; 
+   */
 }
 
 .btn:disabled {
@@ -44,12 +46,10 @@ button {
   color: var(--base);
 }
 
-.btn--fill.mock--hover,
 .btn--fill:hover {
   background: var(--accent-hover);
 }
 
-.btn--fill.mock--focus,
 .btn--fill:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -69,12 +69,10 @@ button {
   color: var(--accent);
 }
 
-.btn--outline.mock--hover,
 .btn--outline:hover {
   background: var(--base-hover);
 }
 
-.btn--outline.mock--focus,
 .btn--outline:focus-visible {
   outline: 2px solid transparent;
   outline-offset: -2px;
@@ -94,12 +92,10 @@ button {
   color: var(--accent);
 }
 
-.btn--ghost.mock--hover,
 .btn--ghost:hover {
   background: var(--base-hover);
 }
 
-.btn--ghost.mock--focus,
 .btn--ghost:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -108,11 +104,6 @@ button {
 
 .btn--ghost:disabled {
   color: var(--accent-disabled);
-}
-
-.mock--hover,
-.mock--focus {
-  pointer-events: none;
 }
 
 /******************

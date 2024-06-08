@@ -2,18 +2,15 @@ import cn from "classnames";
 import "./button.css";
 
 type ButtonProps = {
-  is?: boolean;
   style?: "fill" | "outline" | "ghost";
   size?: "small" | "base";
   disabled?: boolean;
-  mock?: string;
   children: React.ReactNode;
 };
 
 export const Button = ({
   style = "fill",
   size = "base",
-  mock,
   disabled,
   children,
 }: ButtonProps) => {
@@ -21,13 +18,9 @@ export const Button = ({
 
   const styleClass = `btn--${style}`;
   const sizeClass = `btn--${size}`;
-  const mockClass = `mock--${mock}`;
 
   return (
-    <button
-      className={cn(["btn", styleClass, sizeClass, mockClass])}
-      disabled={disabled}
-    >
+    <button className={cn(["btn", styleClass, sizeClass])} disabled={disabled}>
       {children}
     </button>
   );
