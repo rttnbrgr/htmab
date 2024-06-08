@@ -53,7 +53,7 @@ button {
 .btn--fill:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
-  outline-color: var(--accent-focus);
+  outline-color: var(--focus);
 }
 
 .btn--fill:disabled {
@@ -78,7 +78,7 @@ button {
 .btn--outline:focus-visible {
   outline: 2px solid transparent;
   outline-offset: -2px;
-  outline-color: var(--accent-focus);
+  outline-color: var(--focus);
 }
 
 .btn--outline:disabled {
@@ -103,7 +103,7 @@ button {
 .btn--ghost:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
-  outline-color: var(--accent-focus);
+  outline-color: var(--focus);
 }
 
 .btn--ghost:disabled {
