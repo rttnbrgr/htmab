@@ -11,7 +11,8 @@ const meta = {
   tags: ["autodocs"],
   args: {
     size: "base",
-    disabled: false,
+    disabled: true,
+    name: "AArrowDown", // fix in storybook
   },
 } satisfies Meta<typeof IconButton>;
 
@@ -19,4 +20,4 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Icon: Story = {};
+export const Example: Story = {};

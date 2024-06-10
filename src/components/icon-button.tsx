@@ -1,15 +1,19 @@
 import cn from "classnames";
 import "./icon-button.css";
-import { Camera } from "lucide-react";
+import { Icon, validIcons } from "./icon";
 
 type IconButtonProps = {
   size?: "small" | "base";
   disabled?: boolean;
+  name: validIcons;
 };
 
-export const IconButton = ({ size = "base", disabled }: IconButtonProps) => {
+export const IconButton = ({
+  size = "base",
+  disabled,
+  name,
+}: IconButtonProps) => {
   //
-
   const sizeClass = `iconBtn--${size}`;
   const iconSize = size === "base" ? 20 : 12;
 
@@ -18,7 +22,7 @@ export const IconButton = ({ size = "base", disabled }: IconButtonProps) => {
       className={cn(["iconBtn iconBtn--fill", sizeClass])}
       disabled={disabled}
     >
-      <Camera size={iconSize} />
+      <Icon name={name} size={iconSize} />
     </button>
   );
 };
