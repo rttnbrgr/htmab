@@ -3,7 +3,10 @@
   "private": true,
   "version": "0.0.1",
   "description": "How to make a button",
-  "author": "@rttnbrgr (Nathan Rothenberger)",
+  "author": {
+    "name": "@rttnbrgr",
+    "url": "Nathan Rothenberger"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,7 +14,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_11ec8604a8465cc"
   },
   "dependencies": {
     "classnames": "^2.5.1",
