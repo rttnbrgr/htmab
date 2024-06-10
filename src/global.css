@@ -23,7 +23,7 @@ body {
   :root {
     --base: #fff;
     --base-hover: #f4faff;
-    --accent: red;
+    --accent: #0090ff;
     --accent-hover: #0588f0;
     --focus: #5eb1ef;
     --accent-disabled: #acd8fc;
