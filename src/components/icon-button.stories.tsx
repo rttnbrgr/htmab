@@ -12,7 +12,7 @@ const meta = {
   args: {
     size: "base",
     disabled: true,
-    name: "AArrowDown", // fix in storybook
+    name: "ArrowRight", // fix in storybook
   },
 } satisfies Meta<typeof IconButton>;
 
@@ -20,4 +20,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Example: Story = {};
+export const Example: Story = {
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/DgeLmVs39DGeemGxu3WDvO/Working-Draft?node-id=62-1420&t=phOK4WiygQ3EPmvH-4",
+    },
+  },
+};

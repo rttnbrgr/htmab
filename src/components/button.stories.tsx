@@ -25,16 +25,34 @@ export const Fill: Story = {
   args: {
     style: "fill",
   },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/DgeLmVs39DGeemGxu3WDvO/Working-Draft?node-id=54-697&t=phOK4WiygQ3EPmvH-4",
+    },
+  },
 };
 
 export const Outline: Story = {
   args: {
     style: "outline",
   },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/DgeLmVs39DGeemGxu3WDvO/Working-Draft?node-id=62-1359&t=phOK4WiygQ3EPmvH-4",
+    },
+  },
 };
 
 export const Ghost: Story = {
   args: {
     style: "ghost",
+  },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/DgeLmVs39DGeemGxu3WDvO/Working-Draft?node-id=62-1175&t=phOK4WiygQ3EPmvH-4",
+    },
   },
 };
