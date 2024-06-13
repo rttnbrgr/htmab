@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { IconButton } from "./icon-button";
+import { iconOptions } from "./icon-utils";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -13,6 +14,11 @@ const meta = {
     size: "base",
     disabled: true,
     name: "ArrowRight", // fix in storybook
+  },
+  argTypes: {
+    name: {
+      options: [...iconOptions],
+    },
   },
 } satisfies Meta<typeof IconButton>;
 
