@@ -1,3 +1,5 @@
+// cant turn a union type into an array
+
 export const iconOptions = [
   "AArrowDown",
   "AArrowUp",
