@@ -4,7 +4,8 @@ name: "Chromatic"
 
 on:
   push:
-    branches: -main
+    branches:
+      - main
   pull_request:
     types: [assigned, ready_for_review, review_requested, opened, edited]
 
