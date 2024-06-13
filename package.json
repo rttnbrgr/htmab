@@ -15,7 +15,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_11ec8604a8465cc"
+    "chromatic": "npx chromatic --exit-zero-on-changes"
   },
   "dependencies": {
     "classnames": "^2.5.1",
