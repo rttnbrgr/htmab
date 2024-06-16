@@ -12,7 +12,7 @@ const meta = {
   tags: ["autodocs"],
   args: {
     size: "base",
-    disabled: true,
+    disabled: false,
     name: "ArrowRight", // fix in storybook
   },
   argTypes: {
