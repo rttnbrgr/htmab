@@ -22,6 +22,9 @@ function App() {
                 <td>Fill</td>
                 <td>Base</td>
                 <td>
+                  <button className="btn btn--base btn--fill">
+                    Button html
+                  </button>
                   <Button style="fill">Button</Button>
                 </td>
                 <td>
