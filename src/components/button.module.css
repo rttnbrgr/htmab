@@ -1,4 +1,4 @@
-button {
+.reset {
   /* generic reset */
   font-family: inherit;
   font-feature-settings: inherit;
@@ -19,7 +19,8 @@ button {
   cursor: pointer;
 }
 
-.btn {
+.base {
+  composes: reset;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -34,52 +35,52 @@ button {
   line-height: 1;
 }
 
-.btn:disabled {
+.base:disabled {
   pointer-events: none;
 }
 
 /******************
  * Fill
  ******************/
-.btn--fill {
+.fill {
   background: var(--accent);
   color: var(--base);
 }
 
-.btn--fill:hover {
+.fill:hover {
   background: var(--accent-hover);
 }
 
-.btn--fill:focus-visible {
+.fill:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
   outline-color: var(--focus);
 }
 
-.btn--fill:disabled {
+.fill:disabled {
   background: var(--accent-disabled);
 }
 
 /******************
  * Outline
  ******************/
-.btn--outline {
+.outline {
   border: 2px solid var(--accent);
   background: var(--base);
   color: var(--accent);
 }
 
-.btn--outline:hover {
+.outline:hover {
   background: var(--base-hover);
 }
 
-.btn--outline:focus-visible {
+.outline:focus-visible {
   outline: 2px solid transparent;
   outline-offset: -2px;
   outline-color: var(--focus);
 }
 
-.btn--outline:disabled {
+.outline:disabled {
   border: 2px solid var(--accent-disabled);
   color: var(--accent-disabled);
 }
@@ -87,29 +88,29 @@ button {
 /******************
  * Ghost
  ******************/
-.btn--ghost {
+.ghost {
   background: transparent;
   color: var(--accent);
 }
 
-.btn--ghost:hover {
+.ghost:hover {
   background: var(--base-hover);
 }
 
-.btn--ghost:focus-visible {
+.ghost:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
   outline-color: var(--focus);
 }
 
-.btn--ghost:disabled {
+.ghost:disabled {
   color: var(--accent-disabled);
 }
 
 /******************
  * Size
  ******************/
-.btn--small {
+.small {
   padding: 6px 8px;
   border-radius: 6px;
   /* Level 2/Small */
@@ -117,7 +118,7 @@ button {
   letter-spacing: -0.36px;
 }
 
-.btn--base {
+.medium {
   padding: 8px 12px;
   border-radius: 8px;
   /* Level 2/Button - Base */
