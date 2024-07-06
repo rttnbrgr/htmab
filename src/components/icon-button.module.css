@@ -52,6 +52,28 @@
 }
 
 /******************
+ * Ghost
+ ******************/
+.ghost {
+  background: transparent;
+  color: var(--accent);
+}
+
+.ghost:hover {
+  background: var(--base-hover);
+}
+
+.ghost:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  outline-color: var(--focus);
+}
+
+.ghost:disabled {
+  color: var(--accent-disabled);
+}
+
+/******************
  * Size
  ******************/
 .small {
