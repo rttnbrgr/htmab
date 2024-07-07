@@ -12,15 +12,19 @@ const meta = {
   tags: ["autodocs"],
   args: {
     children: "Button",
-    style: "fill",
-    size: "base",
     disabled: false,
-    icon: "ArrowRight",
-    iconIs: "after",
+    // size: "base",
   },
+  // Clean up strings vs options
   argTypes: {
+    style: {
+      options: ["fill", "outline", "ghost"], // clean this up? import?
+    },
+    size: {
+      options: ["base", "small"],
+    },
     icon: {
-      options: [...iconOptions],
+      options: [null, ...iconOptions], // clean this up
     },
     iconIs: {
       options: ["before", "after"],
