@@ -6,9 +6,6 @@ import { Button } from "./button";
 const meta = {
   title: "Visual Tests/Button",
   component: Button,
-  parameters: {
-    layout: "centered",
-  },
   decorators: [
     Story => (
       <div style={{ padding: "1em" }}>

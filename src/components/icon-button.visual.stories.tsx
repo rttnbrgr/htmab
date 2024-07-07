@@ -6,11 +6,6 @@ import { IconButton } from "./icon-button";
 const meta = {
   title: "Visual Tests/Icon Button",
   component: IconButton,
-  args: {
-    size: "base",
-    disabled: false,
-    name: "ArrowRight", // fix in storybook
-  },
   decorators: [
     Story => (
       <div style={{ padding: "1em" }}>
