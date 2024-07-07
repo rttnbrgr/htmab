@@ -34,11 +34,17 @@ export const FillHover: Story = {
   args: {
     ...Fill.args,
   },
+  parameters: {
+    pseudo: { hover: true },
+  },
 };
 
 export const FillFocus: Story = {
   args: {
     ...Fill.args,
+  },
+  parameters: {
+    pseudo: { "focus-visible": true },
   },
 };
 
@@ -59,10 +65,18 @@ export const Outline: Story = {
   },
 };
 
+export const OutlineHover: Story = {
+  args: {
+    ...Outline.args,
+  },
+  parameters: {
+    pseudo: { hover: true },
+  },
+};
+
 export const OutlineDisabled: Story = {
   args: {
-    ...Fill.args,
-    style: "outline",
+    ...Outline.args,
     disabled: true,
   },
 };
@@ -74,6 +88,16 @@ export const Ghost: Story = {
   args: {
     ...Fill.args,
     style: "ghost",
+  },
+};
+
+export const GhostHover: Story = {
+  args: {
+    ...Fill.args,
+    style: "ghost",
+  },
+  parameters: {
+    pseudo: { hover: true },
   },
 };
 
