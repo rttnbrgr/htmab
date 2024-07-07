@@ -1,4 +1,4 @@
-button {
+.reset {
   /* generic reset */
   font-family: inherit;
   font-feature-settings: inherit;
@@ -19,47 +19,69 @@ button {
   cursor: pointer;
 }
 
-.iconBtn {
+.base {
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
 
-.iconBtn:disabled {
+.base:disabled {
   pointer-events: none;
 }
 
 /******************
  * Fill
  ******************/
-.iconBtn--fill {
+.fill {
   background: var(--accent);
   color: var(--base);
 }
 
-.iconBtn--fill:hover {
+.fill:hover {
   background: var(--accent-hover);
 }
 
-.iconBtn--fill:focus-visible {
+.fill:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
   outline-color: var(--focus);
 }
 
-.iconBtn--fill:disabled {
+.fill:disabled {
   background: var(--accent-disabled);
+}
+
+/******************
+ * Ghost
+ ******************/
+.ghost {
+  background: transparent;
+  color: var(--accent);
+}
+
+.ghost:hover {
+  background: var(--base-hover);
+}
+
+.ghost:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  outline-color: var(--focus);
+}
+
+.ghost:disabled {
+  color: var(--accent-disabled);
 }
 
 /******************
  * Size
  ******************/
-.iconBtn--small {
+.small {
   padding: 6px;
   border-radius: 6px;
 }
 
-.iconBtn--base {
+.medium {
   padding: 8px;
   border-radius: 8px;
 }
