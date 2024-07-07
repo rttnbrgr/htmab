@@ -8,7 +8,7 @@ const meta = {
   component: IconButton,
   decorators: [
     Story => (
-      <div style={{ padding: "1em" }}>
+      <div style={{ padding: "1em", display: "inline-flex" }}>
         <Story />
       </div>
     ),
