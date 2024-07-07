@@ -111,7 +111,8 @@
  * Size
  ******************/
 .small {
-  padding: 6px 8px;
+  height: 24px;
+  padding: 0 8px;
   border-radius: 6px;
   /* Level 2/Small */
   font-size: 12px;
@@ -119,7 +120,9 @@
 }
 
 .medium {
-  padding: 8px 12px;
+  /*  */
+  height: 36px;
+  padding: 0 12px;
   border-radius: 8px;
   /* Level 2/Button - Base */
   font-size: 16px;

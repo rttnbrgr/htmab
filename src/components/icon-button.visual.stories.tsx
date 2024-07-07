@@ -1,13 +1,15 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { userEvent, within } from "@storybook/test";
-import { Button } from "./button";
+import { within } from "@storybook/test";
+import { IconButton } from "./icon-button";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: "Visual Tests/Button",
-  component: Button,
-  parameters: {
-    layout: "centered",
+  title: "Visual Tests/Icon Button",
+  component: IconButton,
+  args: {
+    size: "base",
+    disabled: false,
+    name: "ArrowRight", // fix in storybook
   },
   decorators: [
     Story => (
@@ -16,7 +18,7 @@ const meta = {
       </div>
     ),
   ],
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof IconButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -37,10 +39,10 @@ async function focusButton({ canvasElement }) {
  */
 export const Fill: Story = {
   args: {
-    children: "Button",
     style: "fill",
     size: "base",
     disabled: false,
+    name: "ArrowRight", // fix in storybook
   },
 };
 
@@ -66,43 +68,6 @@ export const FillDisabled: Story = {
   name: "Fill - Disabled",
   args: {
     ...Fill.args,
-    disabled: true,
-  },
-};
-
-/**
- * Outline - States
- */
-export const Outline: Story = {
-  args: {
-    ...Fill.args,
-    style: "outline",
-  },
-};
-
-export const OutlineHover: Story = {
-  name: "Outline - Hover",
-  args: {
-    ...Outline.args,
-  },
-  parameters: {
-    pseudo: { hover: true },
-  },
-};
-
-export const OutlineFocus: Story = {
-  name: "Outline - Focus",
-  args: {
-    ...Fill.args,
-    style: "outline",
-  },
-  play: focusButton,
-};
-
-export const OutlineDisabled: Story = {
-  name: "Outline - Disabled",
-  args: {
-    ...Outline.args,
     disabled: true,
   },
 };
@@ -144,33 +109,6 @@ export const GhostDisabled: Story = {
     ...Fill.args,
     style: "ghost",
     disabled: true,
-  },
-};
-
-/**
- * Icon
- */
-export const WithIconBefore: Story = {
-  name: "Icon - Before",
-  args: {
-    ...Fill.args,
-    icon: "ArrowLeft",
-    iconIs: "before",
-  },
-};
-
-export const WithIconAfter: Story = {
-  name: "Icon - After",
-  args: {
-    ...WithIconBefore.args,
-    iconIs: "after",
-  },
-};
-
-export const WithIconNone: Story = {
-  name: "Icon - None",
-  args: {
-    ...Fill.args,
   },
 };
 

@@ -37,7 +37,7 @@ export const Button = ({
   disabled,
   children,
   iconIs = "after",
-  icon: iconName = "AArrowDown",
+  icon: iconName,
 }: ButtonProps) => {
   //
 

@@ -12,11 +12,6 @@ const meta = {
   tags: ["autodocs"],
   args: {
     children: "Button",
-    style: "fill",
-    size: "base",
-    disabled: false,
-    icon: "ArrowRight",
-    iconIs: "after",
   },
   argTypes: {
     icon: {
