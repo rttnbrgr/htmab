@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { userEvent, within } from "@storybook/test";
 import { Button } from "./button";
 import { iconOptions } from "./icon-utils";
 
@@ -14,7 +15,17 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
+/**
+ * Reusable focus play test
+ */
+async function focusButton({ canvasElement }) {
+  // Starts querying the component from its root
+  const canvas = within(canvasElement);
+
+  // Looks up the button and interacts with it.
+  await canvas.getByRole("button").focus();
+}
+
 /**
  * Fill - States
  */
@@ -43,9 +54,7 @@ export const FillFocus: Story = {
   args: {
     ...Fill.args,
   },
-  parameters: {
-    pseudo: { "focus-visible": true },
-  },
+  play: focusButton,
 };
 
 export const FillDisabled: Story = {
@@ -74,6 +83,14 @@ export const OutlineHover: Story = {
   },
 };
 
+export const OutlineFocus: Story = {
+  args: {
+    ...Fill.args,
+    style: "outline",
+  },
+  play: focusButton,
+};
+
 export const OutlineDisabled: Story = {
   args: {
     ...Outline.args,
@@ -99,6 +116,14 @@ export const GhostHover: Story = {
   parameters: {
     pseudo: { hover: true },
   },
+};
+
+export const GhostFocus: Story = {
+  args: {
+    ...Fill.args,
+    style: "ghost",
+  },
+  play: focusButton,
 };
 
 export const GhostDisabled: Story = {
